@@ -1,80 +1,10 @@
-<!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Certif En poche !</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="topbar">
-  <div class="brand">✦ Certif <span>En poche !</span></div>
-  <button id="themeBtn" class="iconbtn" title="Changer le thème">☾</button>
-</header>
-
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Certif En poche ! — BC3</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>✦ Certif En poche !</b><span id="streak">🔥 0 jour</span></header>
 <main>
-<section class="hero">
-  <div>
-    <p class="eyebrow">MONITEUR ÉDUCATEUR · PROMO 25/27</p>
-    <h1>Ta certif,<br><span>tu l’as en poche.</span> 🎓</h1>
-    <p class="sub">Un espace de révision pensé pour progresser sans te noyer dans tes cours.</p>
-  </div>
-  <div class="target-card">
-    <div class="target-head"><span>🎯 Objectif prioritaire</span><b>BC3</b></div>
-    <p>Préparation à l’étude de cas</p>
-    <div class="progress"><i style="width:22%"></i></div>
-    <small>22 % de progression</small>
-  </div>
-</section>
-
-<section class="stats">
-  <div><b id="score">0</b><small>points</small></div>
-  <div><b id="answered">0</b><small>questions</small></div>
-  <div><b id="streak">0</b><small>bonne série 🔥</small></div>
-</section>
-
-<section>
-  <div class="section-title"><h2>Réviser par BC</h2><span>V1</span></div>
-  <div class="cards">
-    <button class="bc-card" data-bc="BC1"><span>🧭</span><b>BC1</b><small>Accompagnement socio-éducatif</small></button>
-    <button class="bc-card" data-bc="BC2"><span>🧩</span><b>BC2</b><small>Projet éducatif spécialisé</small></button>
-    <button class="bc-card active" data-bc="BC3"><span>🤝</span><b>BC3</b><small>Travail en équipe & partenariat</small><em>PRIORITÉ</em></button>
-  </div>
-</section>
-
-<section class="revision">
-  <div class="section-title"><h2>Mode de révision</h2></div>
-  <div class="mode-grid">
-    <button class="mode" data-mode="qcm">🧠 <b>QCM</b><small>Teste tes connaissances</small></button>
-    <button class="mode" data-mode="vf">⚡ <b>Vrai / Faux</b><small>Révision express</small></button>
-    <button class="mode" data-mode="open">✍️ <b>Question ouverte</b><small>Formule ta réponse</small></button>
-    <button class="mode" data-mode="case">📋 <b>Étude de cas</b><small>Mode certification</small></button>
-    <button class="mode" data-mode="exam">⏱️ <b>Mode examen</b><small>Conditions certif</small></button>
-    <button class="mode" data-mode="boss">👑 <b>Boss final</b><small>Difficulté maximale</small></button>
-  </div>
-</section>
-
-<section class="difficulty">
-  <div class="section-title"><h2>Difficulté</h2></div>
-  <div class="levels">
-    <button class="level selected" data-level="1">🟢<b>Découverte</b></button>
-    <button class="level" data-level="2">🟡<b>Maîtrise</b></button>
-    <button class="level" data-level="3">🟠<b>Mobilisation</b></button>
-    <button class="level" data-level="4">🔴<b>Certif</b></button>
-    <button class="level" data-level="5">👑<b>Boss</b></button>
-  </div>
-</section>
-
-<section class="quiz-box" id="quizBox">
-  <div class="quiz-top"><span id="quizTag">BC3 · Découverte</span><span id="qCount"></span></div>
-  <h2 id="question">Prête ? Lance une session de révision 👇</h2>
-  <div id="answers" class="answers"></div>
-  <button id="startBtn" class="primary">Commencer une session 🚀</button>
-  <p id="feedback" class="feedback"></p>
-</section>
-</main>
-
-<footer>Certif En poche ! · V1 · Ton espace de révision ME 🖤</footer>
-<script src="script.js"></script>
-</body>
-</html>
+<section id="home" class="page active"><p class="eyebrow">MONITEUR ÉDUCATEUR · PROMO 25/27</p><h1>Ton BC3,<br><em>en poche.</em> 🎓</h1><p class="lead">Réviser, t’entraîner, repérer tes lacunes et suivre tes acquis jusqu’à la certification.</p><button data-go="training" class="primary">Commencer →</button><div class="cards"><button data-go="training">🎯<b> Entraînement adaptatif</b><small>Le niveau évolue selon tes résultats.</small></button><button data-go="memos">🧠<b> Fiches mémo</b><small>Méthodes, rôles et pièges.</small></button><button data-go="exam">⏱️<b> Mode certification</b><small>20 points · 1h30.</small></button><button data-go="progress">📈<b> Mes lacunes</b><small>Acquis, fragilités, progression.</small></button></div></section>
+<section id="dashboard" class="page"><h2>Tableau de bord</h2><div class="stats"><div><small>Score moyen</small><strong id="avg">0%</strong></div><div><small>Exercices</small><strong id="done">0</strong></div><div><small>Acquis solides</small><strong id="solid">0</strong></div><div><small>À retravailler</small><strong id="weak">5</strong></div></div><div class="panel"><h3>🧭 Mes compétences BC3</h3><div id="bars"></div></div><div class="panel"><h3>💡 Priorité</h3><p id="next"></p></div></section>
+<section id="training" class="page"><h2>Entraînement adaptatif</h2><p class="muted">Niveau 1 → Je connais · 2 → Je comprends · 3 → Je mobilise · 4 → J’analyse · 5 → Certification.</p><div class="levels" id="levels"></div><div class="filters"><select id="filter"><option value="all">Toutes les compétences</option><option value="team">Q1 · Équipe</option><option value="partner">Q2 · Partenariat</option><option value="institution">Q3 · Institution</option><option value="quality">Q4 · Qualité</option><option value="email">Q5 · Écrit pro</option></select><button id="smart" class="secondary">✨ Choisir pour moi</button></div><div id="exercise"></div></section>
+<section id="memos" class="page"><h2>Fiches mémo techniques</h2><div id="memos"></div></section>
+<section id="exam" class="page"><h2>Mode certification</h2><p class="muted">Étude de cas · Q1 4 pts · Q2 4 pts · Q3 3 pts · Q4 3 pts · Q5 4 pts · qualité 2 pts · durée 1h30.</p><button id="newExam" class="secondary">Nouvelle simulation</button><div id="exambox"></div></section>
+<section id="progress" class="page"><h2>Mes acquis & mes lacunes</h2><div class="panel"><div id="progressbars"></div></div><div class="panel"><h3>🔎 Erreurs enregistrées</h3><div id="errors"></div></div><div class="panel"><h3>📝 Journal de progression</h3><textarea id="journal" placeholder="Ce que j’ai compris… Ce qui reste difficile… Ma stratégie…"></textarea><button id="save" class="primary">Enregistrer</button><span id="saved"></span></div></section>
+</main><nav><button data-go="home">⌂<small>Accueil</small></button><button data-go="dashboard">◈<small>Suivi</small></button><button data-go="training">✦<small>Réviser</small></button><button data-go="memos">▣<small>Mémos</small></button><button data-go="progress">↗<small>Progrès</small></button></nav><script src="script.js"></script></body></html>
